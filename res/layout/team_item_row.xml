@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="@dimen/recyclerview_padding"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/recyclerview_margin"
+        android:gravity="center">
+
+        <TextView
+            android:text="Match 55"
+            android:textSize="24dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_number" />
+
+        <TextView
+            android:text="Blue Alliance 1"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_alliance" />
+    </LinearLayout>
+
+    <TextView
+        android:text="102 pts"
+        android:textSize="24dp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/recyclerview_margin"
+        android:id="@+id/recyclerview_points" />
+
+    <TextView
+        android:text="37.5 %"
+        android:textSize="24dp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerview_percent" />
+
+</LinearLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_match"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.frcteam5450.shrecscout.MatchTeamActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Total Points Scored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:inputType="number"
+                android:id="@+id/match_points"
+                android:layout_weight="1"
+                android:text="0"
+                android:hint="Enter Point Total"
+                android:gravity="center"
+                android:textSize="32dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Blue Alliance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alliance" />
+
+                <TextView
+                    android:text="Red Alliance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right" />
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alliance_position"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1"
+                android:entries="@array/alliance_position_arrays"
+                android:background="?android:attr/selectableItemBackground"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:text="Autonomous High Goals Scored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/autoHighGoalsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/autoHighGoals"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/autoHighGoalsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Autonomous Low Goals Scored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/autoLowGoalsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/autoLowGoals"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/autoLowGoalsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Autonomous Gears Delivered"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/autoGearsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/autoGears"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/autoGearsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <Switch
+                android:text="Crossed Line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:id="@+id/crossed"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Teleoperated High Goals Scored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/teleopHighGoalsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/teleopHighGoals"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/teleopHighGoalsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Teleoperated Low Goals Scored"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/teleopLowGoalsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/teleopLowGoals"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/teleopLowGoalsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Teleoperated Gears Delivered"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/text_margin"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+                    android:id="@+id/teleopGearsDown"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/teleopGears"
+                    android:gravity="center"
+                    android:textSize="32dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    android:id="@+id/teleopGearsUp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <Switch
+                android:text="Lifted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lifted"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
